@@ -3,7 +3,7 @@
 The files of interest are:
 1. P1.ipynb
 
-2. writeup.md
+2. WRITEUP.md
 
 3. /writeup_output/
 
