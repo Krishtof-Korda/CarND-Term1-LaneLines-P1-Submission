@@ -1,22 +1,3 @@
----
-
-[//]: # (Image References)
-
-[image1]: ./writeup_output/Gray.jpg "Grayscale"
-[image2]: ./writeup_output/BlurGray.jpg "Gaussian"
-[image3]: ./writeup_output/CannyGray.jpg "Canny"
-[image4]: ./writeup_output/MaskedGray.jpg "Masked"
-[image5]: ./writeup_output/HoughGray.jpg "Hough"
-[image6]: ./writeup_output/ChallengeGray.jpg "ChallengFailed"
-[image7]: ./writeup_output/ColorRegionMask.jpg "ColorMask"
-[image8]: ./writeup_output/CannyColor.jpg "CannyColor"
-[image9]: ./writeup_output/MaskedColor.jpg "MaskedColor"
-[image10]: ./writeup_output/HoughColor.jpg "HoughColor"
-[image11]: ./writeup_output/ChallengeColor.jpg "ChallengeColor"
-
-
----
-
 ### My journey to finding lines
 
 ### 1. The pipeline
@@ -27,53 +8,53 @@ That was much easier to manage and kept me on track for on time submission. So h
 
 I started with simply gray scaling the images.
 
-![alt text][image1]
+![alt text](./writeup_output/Gray.jpg)
 
 Then is used the Gaussian smoothing to soften the noise.
 
-![alt text][image2]
+![alt text](./writeup_output/BlurGray.jpg)
 
 The next step was to feed the smoothed image into Canny edge detection. 
 
-![alt text][image3]
+![alt text](./writeup_output/CannyGray.jpg)
 
 That looks really neat! I was surprised at the detail.
 
 Lets get rid of that detail even though it looked cool! I used a trapezoid
 mask as in class.
 
-![alt text][image4]
+![alt text](./writeup_output/MaskedGray.jpg)
 
 The last step is to feed that into a Hough lines detection.
 
-![alt text][image5]
+![alt text](./writeup_output/HoughGray.jpg)
 
 Wow! those lines look really sharp!
 
 Now it may seem from my description that it was easy, but in fact it took me hours to tune the variable in the Hough lines function. I wanted nice contiuous lines without overfitting. I thought, it doesn't get better than this. Then I tried the challenge video. Ahhhh! Look at all those lines going across my lane! Yuck!
 
-![alt text][image6]
+![alt text](./writeup_output/ChallengeGray.jpeg)
 
 Okay time to reach into the bag of tricks and try something new. I decided
 since I had only used grayscale up to this point, maybe I should try some 
 color masking to only focus on the colors of interest.
 
-![alt text][image7]
+![alt text](./writeup_output/ColorRegionMask.jpg)
 
 Oooo, that looks nicer already!
 
 So do the Canny edges masked or unmasked.
 
-![alt text][image8]
-![alt text][image9]
+![alt text](./writeup_output/CannyColor.jpg)
+![alt text](./writeup_output/MaskedColor.jpg)
 
 How about the Houghs? Still pretty good, maybe a little loss of data.
 
-![alt text][image10]
+![alt text](./writeup_output/HoughColor.jpg)
 
 But that leads to a passable result on the challenge video. 
 
-![alt text][image11]
+![alt text](./writeup_output/ChallengeColor.jpeg)
 
 You can see that there is still noise and picking up stray edges but it stays in line with the lane line.
 
