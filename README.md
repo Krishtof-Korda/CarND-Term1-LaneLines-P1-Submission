@@ -1,6 +1,7 @@
 ###This is the submission of my first project for the Self-Driving Car Nanodegree.
 
 The files of interest are:
+
 1. P1.ipynb
 
 2. WRITEUP.md
