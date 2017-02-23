@@ -89,5 +89,5 @@ It would also be great to do a higher order polynomial fit to the lines so that 
 
 Lastly determining a masking technique that is entirely independent of video or camera location.
 
-### Praises be unto the creators and teachers!
+### Thank you creators for making a wonderful project and opening my eyes to this wonderful world!
 I think I have truly found a passion in self-driving cars and hope to change my career as soon as possible. This stuff is really fun!
